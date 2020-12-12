@@ -181,6 +181,8 @@ html {
 }
 
 /* gallary css */
+
+
 .gallery .container {
     max-width: 100%;
 }
@@ -277,6 +279,63 @@ html {
     transform: translate3d(0,0,0);
 }
 
+/* testimonials CSS */
+
+.testimonials {
+    background: url(../images/cc1.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    text-align: center;   
+    padding: 3rem 0 5rem; 
+}
+
+.testimonials .container h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 3rem;  
+}
+
+.testimonials .test-monials {
+    background-color: rgba(255, 255, 255 , 0.4);
+    border: 0.25rem solid #FF0E83;
+    cursor: pointer;
+}
+
+.testimonials .item .content {
+    padding: 3rem 2rem 0 3rem;
+}
+
+.testimonials .content p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: 1.3px;
+    font-weight: 300;
+}
+
+.testimonials .content h5{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    padding: 1rem 0 0rem;
+}
+
+.testimonials .content .quote i{
+    color: #2CBEFF;
+    margin: 0 1rem;
+}
+
+/* .testimonials .quote p::before {
+    content: '<h1>pham</h1>';
+    height: 10rem;
+}
+
+.testimonials .quote p::after {
+    content: "Phong";
+    height: 20rem;
+} */
+
 
 
 /* video CSS */
@@ -297,6 +356,7 @@ html {
     background-color: #4E2A84;
     margin-top: 3rem;
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .team .row {
