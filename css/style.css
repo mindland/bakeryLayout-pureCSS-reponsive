@@ -46,8 +46,7 @@ a {
 
 .animate__animated.animate__backInDown {
     --animate-duration: 1s;
-
-  }
+}
 
 .container {
     max-width: 72rem;
@@ -67,6 +66,13 @@ a {
 
 .w-full {
     width: 100% !important;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: JetBrainsMono-bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
  /* header css */
 .header {
@@ -169,8 +175,9 @@ a {
 }
 
 .carousel p {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     letter-spacing: 1.2px;
+    display: block;
 }
 
 /* .carousel h1::before {
@@ -183,13 +190,21 @@ a {
     color: rebeccapurple;
 } */
 
-.carousel button {
+.outs-more-btn a{
     background-color: #FF0E83;
     color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 0.375rem;
-    padding: 0.675rem 1.25rem;
-    margin-top: 1rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 0.3125rem;
+    padding: 0.875rem 2rem;
+    outline: none;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.outs-more-btn a:hover {
+    color: #000000;
+    border-color: #FF0E83;
+    background-color: #FFFFFF;
 }
 
 /* Statistic CSS */
@@ -217,7 +232,54 @@ a {
     font-family: JetBrainsMono-bold;
 }
 
-/* gallary css */
+/* Services CSS */
+.services {
+    background: url(/images/s1.jpg) no-repeat center center;
+    background-size: cover;  
+    text-align: center; 
+    padding: 3rem 0;
+}
+
+.services h3 {
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+}
+
+.services .col {
+    width: 25%;
+}
+
+.services i {
+    font-size: 3.75rem;
+    border: 1px solid #4e2a84;
+    width: 6.75rem;
+    height: 6.75rem;
+    line-height: 6.75rem;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #4e2a84;
+}
+
+.services .ser-info h4 {
+    font-size: 1.625rem;
+    color: #000000;
+    letter-spacing: 0.125rem;
+    margin: 1.125rem 0;
+    font-family: JetBrainsMono-thin;
+}
+
+
+.services .ser-info p {
+    font-family: JetBrainsMono-light;;
+    line-height: 1.5rem;
+    margin-bottom: 1.125rem;
+}
+
+/* gallery css */
+
+.gallery {
+    padding-top: 3rem;
+}
 
 .gallery .container {
     max-width: 100%;
@@ -634,6 +696,7 @@ a {
 
 .intro .item h1 {
     color: #FFFFFF;
+    font-size: 1.625rem;
     margin-bottom: 1rem;
 }
 
@@ -825,11 +888,15 @@ a {
 
 /* 769px ==> 992px : may tinh bang co lon */
 @media screen and (max-width:992px) {
-
+    .services .col {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
 }
 
 /* 576px ==> 768px :  may tinh bang co nho*/
 @media screen and (max-width:768px) {
+
     .header .navbar {
         display: none;
     }
@@ -867,7 +934,8 @@ a {
         width: 50%;
     }
 
-    .footer .col {
+    .footer .col,
+    {
         padding-top: 1rem;
     }
 
@@ -881,7 +949,7 @@ a {
 @media screen and (max-width:576px) {
 
     html {
-        font-size: 14px;
+        font-size: 14px; 
     }
 
     .carousel h1 {
@@ -913,6 +981,10 @@ a {
         width: 100%
     }
 
+    .services .ser-info h4 {
+        font-size: 1.2rem;
+    }
+
     .team .row {
         justify-content: center;
     }
@@ -933,7 +1005,6 @@ a {
         font-size: 2rem;
     }
 
-    
 }
 
 
