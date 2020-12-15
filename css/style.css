@@ -1,18 +1,42 @@
 @font-face {
-    font-family: phong;
-    src: url(../JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
+    font-family: JetBrainsMono;
+    src: url(../font/JetBrainsMono/JetBrainsMono-Regular.ttf);
 }   
+
+@font-face {
+    font-family: JetBrainsMono-bold;
+    src: url(../font/JetBrainsMono/JetBrainsMono-Bold.ttf);
+}   
+
+@font-face {
+    font-family: JetBrainsMono-light;
+    src: url(../font/JetBrainsMono/JetBrainsMono-Light.ttf);
+}  
+
+@font-face {
+    font-family: JetBrainsMono-thin;
+    src: url(../font/JetBrainsMono/JetBrainsMono-Thin.ttf);
+}  
 
 * {
     /* font-family: 'Open Sans', sans-serif; */
-    font-family: phong;
+    font-family: JetBrainsMono;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1rem;
 }           
 
 html {
     font-size: 16px;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: JetBrainsMono-bold;
+}
+
+a {
+    text-decoration: none;
 }
 
 :root {
@@ -50,7 +74,7 @@ html {
     /* background-image: linear-gradient(to bottom right, red, green, blue, pink, yellow); */
     position: fixed !important;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 }
 
 .header  a {
@@ -60,6 +84,10 @@ html {
 
 .header .navbar a {
     display: inline-block;
+}
+
+.header .active {
+    color: #ff0e83;
 }
 
 .header .navbar a::after {
@@ -83,7 +111,6 @@ html {
 
 .header .logo {  
     font-size: 2.5rem; 
-    font-weight: 600;
 }   
 
 .header .navbar a:hover {
@@ -129,7 +156,6 @@ html {
 
 .carousel h1 {
     font-size: 3rem;
-    font-weight: 600;
     animation-name: bounce;
     animation-duration: 1s;
     animation-timing-function: linear; /*kieu chuyen dong*/
@@ -140,6 +166,11 @@ html {
     /* animation-iteration-count: infinite; */
 
     /* animation-play-state: running; */
+}
+
+.carousel p {
+    padding: 1rem 0;
+    letter-spacing: 1.2px;
 }
 
 /* .carousel h1::before {
@@ -174,14 +205,19 @@ html {
     text-align: center;
 }
 
-.statistic .item p{
+.statistic .item  p{
     font-size: 2rem;
+    font-family: JetBrainsMono-bold;
     color: #4F2A84;
     margin-bottom: 0.625rem;
 }
 
-/* gallary css */
+.statistic .item  span {
+    font-size: 1.2rem;
+    font-family: JetBrainsMono-bold;
+}
 
+/* gallary css */
 
 .gallery .container {
     max-width: 100%;
@@ -227,25 +263,36 @@ html {
     text-align: right;
     height: 100%;
     color: #FFFFFF;
+
 }
 
 .gallery h1 {
     font-size: 3rem;
-    font-weight: 600;
     text-align: center;
     padding-bottom: 3rem;
 }
 
 .gallery .info h2 {
-    font-weight: 200;
+    font-family: JetBrainsMono-thin;
     font-size: 2rem;
     position: relative;
     transform: translate3d(0,1rem,0);
     transition: transform 0.35s;
 }
 
+.gallery .info span {
+    font-size: 2rem;
+}
+
 .gallery .item:hover .info h2{
     transform: translate3d(0,0,0);
+}
+
+.gallery .info p {
+    font-family: JetBrainsMono-thin;
+    font-size: 68.5%;
+    text-transform: uppercase;
+
 }
 
 .gallery .info h2::after, 
@@ -290,7 +337,6 @@ html {
 
 .testimonials .container h3 {
     font-size: 3rem;
-    font-weight: bold;
     color: #FFFFFF;
     text-transform: uppercase;
     margin-bottom: 3rem;  
@@ -315,7 +361,6 @@ html {
 
 .testimonials .content h5{
     font-size: 1.2rem;
-    font-weight: 600;
     letter-spacing: 2px;
     color: #FFFFFF;
     padding: 1rem 0 0rem;
@@ -376,7 +421,6 @@ html {
 .team .title {
     color: #FFFFFF;
     font-size: 3rem;
-    font-weight: 600;
     text-align: center;
 }
 
@@ -511,7 +555,6 @@ html {
     padding: 2rem 0;
     text-align: center;
     font-size: 3rem;
-    font-weight: 600;
 }
 
 .contact .form .form-group{
@@ -523,20 +566,31 @@ html {
 .contact .form textarea
 {
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 0.3125rem;
     border: 1px solid #666666
+}
+
+.contact .form textarea {
+    border-radius: 0;
 }
 
 .contact .form button {
     width: 100%;
     background-color: #FF0E83;
-    color: #FFFFFF;
     display: block;
     border: none;
-    padding: 0.5rem;
-    border-radius: 0.3125rem;
+    padding: 0.6rem;
     cursor: pointer;
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: JetBrainsMono-bold;
+    transition: all 0.4s;    
+} 
+
+.contact .form button:hover {
+    background-color:#000000;
+    color: #FFFFFF;
 }
 
 /*  intro css */
@@ -580,7 +634,7 @@ html {
 
 .intro .item h1 {
     color: #FFFFFF;
-    margin-bottom: 1    rem;
+    margin-bottom: 1rem;
 }
 
 .intro .item p {
@@ -605,10 +659,142 @@ html {
 
 /* map css */
 .map {
-    margin: 1rem 0rem 3rem;
+    margin-top: 3rem;
+}
+
+/* Info CSS */
+.info-section {
+    margin-top: 3rem;
+}
+
+.info-section .col {
+    width: calc( 100% / 3 );
+    text-align: center;
+}
+
+.info-section i {
+    font-size: 1.75rem;
+    color: #4e2a84;
+    margin-bottom: 1rem;
+}
+
+.info-section .item .address p {
+    line-height: 2rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-family: JetBrainsMono-light;
+}
+
+/* Footer CSS */
+.footer {
+    margin-top: 3rem;
+    background-color: rgba(0, 0, 0);
+    color: #FFFFFF;
+    font-family: JetBrainsMono-light;
+}
+
+.footer .row {
+    padding-top: 4rem;
+}
+
+.footer .col {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer .col h4 a {
+    display: block;
+    font-size: 1.5625rem;
+    color: #ff0e83;
+    letter-spacing: 2px;
+    font-family: JetBrainsMono-bold;
+    margin-bottom: 1rem;
+}
+
+.footer p,
+.footer span, 
+.footer li
+{
+    font-size: 0.875rem;
+    font-family: JetBrainsMono-light;
+}
+
+.footer .col .text {
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
+}
+
+.footer .col .bottom-social a i {
+    color: #FFFFFF;
+    font-size: 1rem;
+    border: 1px solid #FFFFFF;
+    width: 2.3125rem;
+    height: 2.3125rem;
+    line-height: 2.3125rem;
+    text-align: center;
+    margin: 0px 0.4rem;
+    transition: all 0.5s;
 }
 
 
+.footer .col .bottom-social a:hover i{
+    color: #ff0e83;
+    border-color: #ff0e83;
+}
+
+.footer .col ul li {
+    border-bottom: 1px dotted;
+    padding: 0px 0px 0.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.footer .col .d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .form-group {
+    margin-bottom: 1rem;
+}
+
+.footer .form-group input[type="email"] {
+    color: #000000;
+    padding: 0.7rem;
+    border: 1px solid #000000;
+    width: 75%;
+    background: rgb(255, 255, 255);
+    outline: none;
+    border-radius: 0.25rem;
+}
+
+.footer form button {
+    color: #000000;
+    font-family: JetBrainsMono-bold;;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.7rem 3rem;
+    background: #ff0e83;
+    transition: 0.5s all;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.footer form button:hover {
+    background-color: #FFFFFF;
+}
+
+.footer .copyright {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .copyright a{
+    color: #ff0e83;
+}
+
+/* Animation */
 @keyframes bounce {
     0%{
         opacity: 0;
@@ -627,6 +813,7 @@ html {
     }
 }
 
+
 /* REPONSIVE , tiet kiem thoi gian va nhan cong*/
 
 /* 992px ==> 1200px : */
@@ -638,9 +825,7 @@ html {
 
 /* 769px ==> 992px : may tinh bang co lon */
 @media screen and (max-width:992px) {
-    h1 {
-        color: red !;
-    }
+
 }
 
 /* 576px ==> 768px :  may tinh bang co nho*/
@@ -675,16 +860,15 @@ html {
         display: none; 
     }
 
-    .intro .item {
-        margin: 0.5rem 0;
-    }
-
-    .video .col , 
     .team .col,
     .gallery .row .col  ,
-    .contact .form .col
+    .footer .col
     {
         width: 50%;
+    }
+
+    .footer .col {
+        padding-top: 1rem;
     }
 
     .gallery .row .col-50 {
@@ -695,6 +879,11 @@ html {
 
 /*  < 576px : dien thoai di dong */
 @media screen and (max-width:576px) {
+
+    html {
+        font-size: 14px;
+    }
+
     .carousel h1 {
         font-size: 2rem;
         animation: none;
@@ -709,16 +898,31 @@ html {
         grid-template-columns: 1fr;
     }
 
-    .statistic .col {
+    .statistic .col
+    {
         width: 50%;
+        margin-bottom: 1rem;
     }
 
     .video .col , 
-    .team .col,
     .gallery .row .col,
-    .contact .form .col
+    .contact .form .col, 
+    .info-section .col, 
+    .footer .col
     {
-        width: 100%;
+        width: 100%
+    }
+
+    .team .row {
+        justify-content: center;
+    }
+
+    .team .col {
+        width: 60%;
+    }
+
+    .info-section .col {
+        margin-bottom: 2rem;
     }
 
     .team .title {
@@ -729,6 +933,7 @@ html {
         font-size: 2rem;
     }
 
+    
 }
 
 
