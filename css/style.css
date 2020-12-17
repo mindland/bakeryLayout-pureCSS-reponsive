@@ -148,6 +148,7 @@ a {
 /* carousel CSS */
 .carousel {
     background-image: url(../images/b3.jpg);
+    /* clip-p   ath: polygon(0 0, 100% 0, 100% 80%, 0% 90%); */
     height: 43rem;
     background-repeat: no-repeat;
     background-size: cover;
